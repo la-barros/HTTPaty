@@ -1,26 +1,30 @@
-#language: pt
+# language: pt
 
-Funcionalidade: Pesuisar funcionarios
-    Para averiguar informaçoes 
-    O usuario do sistema
-    Deseja poder consultar informaçoes dos funcionarios
+Funcionalidade: Pesquisar Funcionarios
+    Para averiguar informações
+    O usuário do sistema 
+    Deseja poder consultar informações dos Funcionarios
 
-
-   Cenario: Buscar informações de funcionario
+    @cenario 
+    Cenario: Buscar informações de funcionario
        Dado que o usuario consulte informações de fucncionario
        Quando ele realizar a pesquisa
        Então uma lista de funcionarios deve retornar
-        
-    Cenario: Cadastrar funcionario 
-        Dado que o usuario cadastre um novo funcionario 
-        Quando ele enviar as informaçoes do funcionario 
-        Então esse funcionario sera cadastrado
 
-    @cenario
+    @cen_dois
+    Cenario: Cadastrar funcionario
+       Dado que o usuario cadatre um novo funcionario
+       Quando ele enviar as informações do funcionario
+       Então esse funcionario sera cadastrado
+
+    @cen_tres
     Cenario: Alterar informações cadastrais
-    Dado que o usuario altere uma informação de fucncionario
-    Quando ele enviar as novas informações 
-    Então as informações serão alteradas 
+       Dado que o usuario altere uma informação de funcionario
+       Quando ele enviar as novas informações
+       Então as informações serão alteradas
 
-
- 
+    @cen_quatro
+    Cenario: Deletar cadastro de funcionario
+        Dado que o usuario queira deletar um funcionario
+        Quando ele enviar a identificação unica
+        Então esse funcionario sera deletado do sistema
